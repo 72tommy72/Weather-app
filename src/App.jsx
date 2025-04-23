@@ -72,7 +72,7 @@ function App() {
             <div className="col-6 col-lg-4 mb-3 mb-lg-0">
               <div className="d-flex align-items-center justify-content-start justify-content-lg-start">
                 <div className="logo">
-                  <img src="../public/logoweather.png" alt="logo" />
+                  <img src="/logoweather.png" alt="logo" />
                 </div>
                 <div className="logo-content ms-3">
                   <h1 className="mb-0">Weather</h1>
