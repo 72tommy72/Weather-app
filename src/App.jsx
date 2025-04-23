@@ -260,11 +260,11 @@ function App() {
                 </div>
                 </div>
                 
-              <div className="col-12 text-center mt-4">
+              {/* <div className="col-12 text-center mt-4">
                 <p className="mb-0">
                   Copyright 2014 Company name. Designed by Themezy. All rights reserved
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
