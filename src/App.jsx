@@ -15,7 +15,7 @@ import {
   faMoon,
   faCloudRain
 } from "@fortawesome/free-solid-svg-icons";
-
+import logoweather from "../public/logoweather.png";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [weatherData, setWeatherData] = useState(null);
@@ -72,7 +72,7 @@ function App() {
             <div className="col-6 col-lg-4 mb-3 mb-lg-0">
               <div className="d-flex align-items-center justify-content-start justify-content-lg-start">
                 <div className="logo">
-                  <img src="../public/logoweather.png" alt="logo" />
+                  <img src={logoweather} alt="logo" />
                 </div>
                 <div className="logo-content ms-3">
                   <h1 className="mb-0">Weather</h1>
@@ -212,7 +212,83 @@ function App() {
                         <div className="icon">
                           <FontAwesomeIcon icon={faMoon} className="text-info" />
                         </div>
-                        <div className="info">
+```javascript
+// Add a function to handle the search bar input and fetch weather data
+const handleSearch = async (e) => {
+  e.preventDefault();
+  await fetchWeatherData();
+};
+
+// Modify the search bar to use the handleSearch function
+<div className="search-container mb-5">
+  <form onSubmit={handleSearch}>
+    <div className="search position-relative">
+      <input 
+        type="text" 
+        className="form-control" 
+        placeholder="Enter your location..." 
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
+      />
+      <button
+        type="submit"
+        className="position-absolute end-0 top-50 translate-middle-y me-2">
+        Search
+      </button>
+    </div>
+  </form>
+</div>
+
+// Add a function to handle the subscribe button click
+const handleSubscribe = async (e) => {
+  e.preventDefault();
+  // Add logic to handle the subscribe button click
+};
+
+// Modify the subscribe button to use the handleSubscribe function
+<div className="search-icons-footer">
+  <div className="row gy-4">
+    <div className="col-12 col-md-8">
+      <div className="search position-relative">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Enter your email to subscribe..."
+        />
+        <button
+          type="submit"
+          className="position-absolute end-0 top-50 translate-middle-y me-2"
+          onClick={handleSubscribe}
+        >
+          Subscribe
+        </button>
+      </div>
+    </div>
+    {/* Rest of the code */}
+  </div>
+</div>
+
+// Add a function to handle the social media icons click
+const handleSocialMediaClick = (icon) => {
+  // Add logic to handle the social media icons click
+};
+
+// Modify the social media icons to use the handleSocialMediaClick function
+<div className="icons d-flex align-items-center gap-3 justify-content-center justify-content-md-end">
+  <span className="social-icon" onClick={() => handleSocialMediaClick('facebook')}>
+    <FontAwesomeIcon className="icons-size" icon={faFacebook} />
+  </span>
+  <span className="social-icon" onClick={() => handleSocialMediaClick('twitter')}>
+    <FontAwesomeIcon className="icons-size" icon={faTwitter} />
+  </span>
+  <span className="social-icon" onClick={() => handleSocialMediaClick('pinterest')}>
+    <FontAwesomeIcon className="icons-size" icon={faPinterest} />
+  </span>
+  <span className="social-icon" onClick={() => handleSocialMediaClick('google')}>
+    <FontAwesomeIcon className="icons-size" icon={faGoogle} />
+  </span>
+</div>
+```                        <div className="info">
                           <span className="value">{day.astro.sunset}</span>
                           <span className="label">Sunset</span>
                         </div>
