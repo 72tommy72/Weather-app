@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    /* font-weight: 700; */
+    margin: 0 0 15px;
+    line-height: normal;
+    font-size: 1.1428571429em;
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
